@@ -1,0 +1,135 @@
+<template name="actor">
+	<body>
+	<div class="wrapper">
+		<div class="left-navigation">
+			<div class="logo">
+				<a href="#"><img src="dummy-logo.png"></a>
+			</div>
+			<div class="profile-box">
+				<div class="dis-table">
+					<div class="dis-tablecell profile-image">
+						<div class="profile-pic"><a href="#"><img src="profile-img.jpg"></a></div>
+					</div>
+					<div class="dis-tablecell profile-txt">
+						<span>Welcome,</span>
+						<a href="#">Guild</a>
+					</div>
+				</div>
+			</div>
+			<div class="account-infos">
+				<div class="account-infos">
+					<ul>
+						<li>
+						<span>Account Address:</span>
+						<span>0xb3f003fbae75603d4f49c389db63b7e0f788db4e</span>
+						</li>
+						<li>
+						<span>Balance:</span>
+						<span id="bal" value=5000>5000 USD</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="right-content">
+			<div class="container">
+				<div class="nav_menu margin-minus">
+					<div class="nav-bar-top">
+						<ul>
+							<li class="profile-drop-down">
+								<a href="#">
+									<img src="profile-img.jpg">
+									Guild
+									<span class=" fa fa-angle-down"></span>
+								</a>
+								<ul class="sub-dropdown">
+									<li><a href="#">Profile</a></li>
+									<li><a href="#">Setting</a></li>
+									<li><a href="#">Logout</a></li>
+								</ul>
+							</li>
+							<li class="noti-info-number" id='notify'>
+								<a  href="javascript:void(0);" id="notification-count">
+									<i class="fa fa-envelope-o" aria-expanded="false"></i>
+									<span class="badge bg-green">6</span>
+								 </a>
+							</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="row-title-count">
+					<div class="row-cols-count">
+						<div class="dis-table">
+							<div class="dis-tablecell">
+								<span class="count_top"><i class="fa fa-money"></i> Royalty Payment</span>
+								<div class="count" id="royalty">2500</div>
+								<!--<span class="count_bottom">From total work</span>-->
+							</div>
+							<div class="dis-tablecell">
+								<span class="count_top"><i class="fa fa-user"></i> Fixed Payment</span>
+								<div class="count" id="fixd">2500</div>
+								<!--<span class="count_bottom"><i class="green">4% </i> From last work</span>-->
+							</div>
+							<div class="dis-tablecell">
+								<span class="count_top"><i class="fa fa-calendar"></i> Start Date</span>
+								<div class="count" id="sdate"></div>
+							</div>
+							<div class="dis-tablecell">
+								<span class="count_top"><i class="fa fa-calendar"></i> End Date</span>
+								<div class="count" id="edate"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="body-content">
+					
+					<div class="show-contract">
+						<iframe name="content" id="content" width="100%" height="500" src="pdf.pdf" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+			Copyright, &copy; 2015 - 2016 Company Name
+			</div>
+		</footer>
+	</div>
+	<div class="overlay" id="notification-overlay" data-animation-in="rollIn" data-animation-out="rollOut">
+	<div class="overlay-box">
+		<div class="content">
+		<div class="overlay-header">Contract Details</div>
+		<div class="overlay-content">
+			<div class="Listing-data">
+				<ul>
+					<li>
+						<h4><span>Start Date:</span> <abbr id="value1">Value</abbr></h4>
+					</li>
+					<li>
+						<h4><span>End Date:</span> <abbr id="value2">Value</abbr></h4>
+					</li>
+					<li>
+						<h4><span>Royalty Percentage:</span> <abbr id="value3">Value</abbr></h4>
+					</li>
+					<li>
+						<h4><span>Payment Currency:</span> <abbr id="value4">Value</abbr></h4>
+					</li>
+					<li>
+						<h4><span>Payment Delivery:</span> <abbr id="value5">Value</abbr></h4>
+					</li>
+					<li>
+						<h4><span>Fixed Amount:</span> <abbr id="value6">Value</abbr></h4>
+					</li>
+				</ul>
+			</div>
+			<div class="notification-buttons text-center">
+				<input type="button" id="sign-note" value="Sign" onclick="$('.closeBtn').click();">
+				<input type="button" id="request-note" value="Request for Change">
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>
+	</body>
+</template>
